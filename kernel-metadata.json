@@ -1,0 +1,12 @@
+{
+  "id": "commencethescourge/audit-node24-ci-guard",
+  "title": "Audit: node24-ci-guard",
+  "code_file": "audit.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": []
+}
