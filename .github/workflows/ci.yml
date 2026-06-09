@@ -11,12 +11,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m py_compile push_kernel.py
-      - run: python3 -c "
-import json
-with open('kernel-metadata.json') as f:
-    m = json.load(f)
-for r in ['id', 'title', 'code_file', 'language', 'kernel_type']:
-    assert r in m, f'missing {r}'
-assert m['code_file'].endswith('.ipynb'), 'code_file must be a notebook'
-print('kernel-metadata.json valid')
-"
+      - run: python3 -c "import json; m=json.load(open('kernel-metadata.json')); assert all(r in m for r in ['id','title','code_file','language','kernel_type']); assert m['code_file'].endswith('.ipynb'); print('metadata OK')"
